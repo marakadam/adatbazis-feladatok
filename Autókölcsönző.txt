@@ -1,0 +1,20 @@
+CREATE TABLE Auto (
+  rendszam CHAR(7) PRIMARY KEY,
+  marka    VARCHAR2(50) NOT NULL,
+  tipus    VARCHAR2(50) NOT NULL,
+  napi_dij INT NOT NULL CHECK (napi_dij > 0)
+);
+ 
+CREATE TABLE Ugyfel (
+  ugyfel_id INT PRIMARY KEY,
+  nev       VARCHAR2(80) NOT NULL,
+  telefon   VARCHAR2(20),
+  email     VARCHAR2(100) NOT NULL UNIQUE
+);
+ 
+CREATE TABLE Kolcsonzes (
+  kolcsonzes_id INT PRIMARY KEY,
+  auto_rendszam CHAR(7) NOT NULL REFERENCES Auto(rendszam),
+  ugyfel_id     INT NOT NULL REFERENCES Ugyfel(ugyfel_id),
+  napok_szama   INT NOT NULL CHECK (napok_szama > 0)
+);
