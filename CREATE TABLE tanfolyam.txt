@@ -1,0 +1,20 @@
+CREATE TABLE tanfolyam (
+	tkod INT PRIMARY KEY,
+ 	megnevezés VARCHAR2(100) NOT NULL,
+	tipus VARHCAR(30),
+	ar INT NOT NULL CHECK (ar > 0)
+);
+
+
+CREATE TABLE resztvevo (
+	tajszam CHAR(13) PRIMARY KEY,
+	nev VARHAR2(80) NOT NULL,
+	lakcim VARCHAR2(150)
+);
+
+CREATE TABLE befizetes ( 
+	befizetes_id INT PRIMARY KEY,
+	tkod INT NOT NULL REFERENCES Tanfolyam(tkod),
+	diak_id CHAR(13) NOT NULL REFERENCES Resztvevo(tajszam),
+	osszeg INT NOT NULL CHECK (osszeg > 0)
+);
