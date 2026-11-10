@@ -17,7 +17,10 @@
 
 9. γ szkod, nev; sum(ar)→osszeg (konyv ⨝ konyv.szerzo = szkod szerzo)
 
-10. A = γ ; avg(ar) →atlag (konyv) 
-π cim (konyv ⨝ ar > atlag A)
+10. Csak a könyv címe: 
+A = γ ; avg(ar) →atlag (konyv) π cim (konyv ⨝ ar > atlag A)
+
+hatoszlopos avgar:
+konyv ⨝ ar > avgar (γ ; avg(ar)→avgar (konyv))
 
 11. γ szkod, nev; count(*)→db (konyv ⨝ konyv.szerzo = szkod szerzo)
