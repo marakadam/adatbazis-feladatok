@@ -1,0 +1,23 @@
+1. π cim, ar ( σ mufaj = 'Horror' (konyv))
+2. π cim, nev ( konyv ⨝ konyv.szerzo = szkod szerzo)
+3. π cim (σ nemzetiseg = 'brit' (szerzo) ⨝ szkod = konyv.szerzo konyv)
+4.M = γ ; min(ar)→minar (konyv)
+π cim, ar (konyv ⨝ ar = minar M)
+
+5.A = γ ; avg(ar)→atlag (konyv)
+π cim (konyv ⨝ ar > atlag A )
+
+6.γ szkod, nev; count(*)→db (konyv ⨝ konyv.szerzo = szkod szerzo)
+
+7.F = γ ; max(ar)→maxar (σ mufaj = 'Fantasy' (konyv))
+γ ; count(*)→db (konyv ⨝ ar > maxar F)
+
+8.F = γ; max(ar)→maxar (σ mufaj = 'Fantasy' (konyv))
+γ ; count(szerzo)→db (π szerzo (konyv ⨝ ar > maxar F))
+
+9. γ szkod, nev; sum(ar)→osszeg (konyv ⨝ konyv.szerzo = szkod szerzo)
+
+10. A = γ ; avg(ar) →atlag (konyv) 
+π cim (konyv ⨝ ar > atlag A)
+
+11. γ szkod, nev; count(*)→db (konyv ⨝ konyv.szerzo = szkod szerzo)
